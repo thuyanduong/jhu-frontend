@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#title {
+  display: block;
+  text-align: center;
+  font-size: 1.75em;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#mobile-title {
+  display: none;
+}
+
+.menu-item {
+  border: 1px black solid;
+  margin: 15px;
+  background: lightgray;
+  position: relative;
+  height: 190px;
+  overflow-y: hidden;
+}
+
+.menu-item:hover {
+  overflow-y: scroll;
+  overscroll-behavior: none;
+  cursor: ns-resize;
+}
+
+.menu-item-title {
+  font-size: 1.25em;
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+  border: 1px black solid;
+  border-top: 0;
+  border-right: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu-item-title-text {
+  display: block;
+}
+
+.menu-item-title-text-mobile {
+  display: none;
+}
+
+#chicken {
+  background: #d59898;
+}
+
+#beef {
+  background: #c14543;
+  color: white;
+}
+
+#sushi {
+  background: #e5d198;
+}
+
+.menu-item-description {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-item-1,
+  .col-item-2 {
+    float: left;
+    width: 50%;
+  }
+
+  .col-item-3 {
+    float: left;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  #title {
+    display: none;
+  }
+
+  #mobile-title {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    display: block;
+    font-size: 1.5em;
+    margin-left: 15px;
+  }
+
+  .menu-item-title {
+    width: 100%;
+    border-left: 0;
+    position: relative;
+  }
+
+  .menu-item-title-text {
+    display: none;
+  }
+
+  .menu-item-title-text-mobile {
+    display: block;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .menu-item-description {
+    margin-top: 0;
+  }
+}

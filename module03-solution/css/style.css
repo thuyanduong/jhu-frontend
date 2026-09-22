@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#navbar {
+  background-color: gainsboro;
+  border-radius: 0;
+  border: 0;
+}
+
+#chicken {
+  background-color: lightblue;
+}
+
+#beef {
+  background-color: lightpink;
+}
+
+#sushi {
+  background-color: lightgreen;
+}
+
+.menu-item {
+  padding: 10px 20px;
+  margin: 10px 0;
+}
