@@ -1,0 +1,12 @@
+.message {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.border-danger {
+  border: 1px solid #a94442;
+}
+
+.border-success {
+  border: 1px solid #3c763d;
+}
