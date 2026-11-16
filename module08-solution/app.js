@@ -51,23 +51,19 @@
                 url: (ApiBasePath + "/menu_items.json"),
             }).then(function (result) {
 
-                if (searchTerm === "") {
-                    return [];
-                }
-
-                // process result and only keep items that match
                 var foundItems = [];
 
-                for (var key in result.data) {
-                    var menuItems = result.data[key]["menu_items"];
-                    for (var item of menuItems) {
-                        if (item.description.indexOf(searchTerm) !== -1) {
-                            foundItems.push(item);
+                if (searchTerm !== "") {
+                    for (var key in result.data) {
+                        var menuItems = result.data[key]["menu_items"];
+                        for (var item of menuItems) {
+                            if (item.description.indexOf(searchTerm) !== -1) {
+                                foundItems.push(item);
+                            }
                         }
                     }
                 }
 
-                // return processed items
                 return foundItems;
             });
         }
