@@ -1,6 +1,8 @@
-<h1>{{list.items.category.name}}</h1>
+<nav>
+  <a ui-sref="home">Home</a> &gt;
+  <a ui-sref="categories">Menu Categories</a> &gt; {{ list.items.category.name}}
+</nav>
 
-<a ui-sref="home">Home</a> > <a ui-sref="categories">Menu Categories</a> >
-{{list.items.category.name}}
+<h1>{{ list.items.category.name }}</h1>
 
 <item-list items="list.items"></item-list>

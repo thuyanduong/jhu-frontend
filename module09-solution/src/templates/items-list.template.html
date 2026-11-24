@@ -1,5 +1,7 @@
 <ul>
   <li ng-repeat="item in $ctrl.items.menu_items">
-    <a>{{ item.name }}: {{ item.description }}</a>
+    <h3>{{ item.name }}</h3>
+
+    <p ng-if="item.description">{{ item.description }}</p>
   </li>
 </ul>
